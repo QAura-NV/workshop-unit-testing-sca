@@ -35,17 +35,6 @@ jobs:
       - name: Run tests
         run: pnpm test:coverage
 
-      - name: Transform JUnit to CTRF
-        run: npx -y junit-to-ctrf junit.xml
-
-      - name: Publish Test Report
-        uses: ctrf-io/github-test-reporter@v1
-        with:
-          report-path: "./ctrf/*.json"
-          summary-report: true
-          github-report: true
-        if: always()
-
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5
         env:

@@ -9,4 +9,8 @@ describe("sum module", () => {
 
     expect(result).toBe("Hello, World!");
   });
+
+  test("it fails", () => {
+    expect(true).toBe(false);
+  });
 });
