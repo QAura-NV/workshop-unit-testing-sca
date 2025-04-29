@@ -7,7 +7,7 @@
     "dev": "node --watch --experimental-strip-types ./src/bin/www.ts",
     "start": "node --experimental-strip-types ./src/bin/www.ts",
     "build": "tsc",
-    "test": "ava",
+    "test": "jest",
     "test:watch": "ava --watch",
     "test:coverage": "c8 -r lcov ava"
   },
@@ -19,8 +19,12 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-typescript": "^7.27.0",
+    "@jest/globals": "^29.7.0",
     "@types/express": "^5.0.1",
     "@types/node": "22",
+    "jest": "^29.7.0",
     "typescript": "^5.8.3"
   }
 }
