@@ -1,13 +1,16 @@
-import test from "ava";
+import { describe, expect, test } from "@jest/globals";
 import { HelloWorldServiceImpl } from "./hello-world.service.ts";
 
-test('helloWorld() should return "Hello, World!"', async (t) => {
-  // Arrange
-  const helloWorldService = new HelloWorldServiceImpl();
+describe("sum module", () => {
+  test("check true", async () => {
+    const helloWorldService = new HelloWorldServiceImpl();
 
-  // Act
-  const result = await helloWorldService.helloWorld();
+    const result = await helloWorldService.helloWorld();
 
-  // Assert
-  t.is(result, "Hello, World!");
+    expect(result).toBe("Hello, World!");
+  });
+
+  test("it fails", () => {
+    expect(true).toBe(false);
+  });
 });
