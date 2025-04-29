@@ -42,6 +42,8 @@ jobs:
         uses: ctrf-io/github-test-reporter@v1
         with:
           report-path: "./ctrf/*.json"
+          summary-report: true
+          github-report: true
         if: always()
 
       - name: SonarQube Scan
