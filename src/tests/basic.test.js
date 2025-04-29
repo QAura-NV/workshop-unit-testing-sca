@@ -3,7 +3,7 @@ import { HelloWorldServiceImpl } from "../services/implementation/hello-world.se
 describe("HelloWorldServiceImpl", () => {
     test('returns correct string', async() => {
         const service = new HelloWorldServiceImpl();
-        const expected = 'Hello, World!!';
+        const expected = 'Hello, World!';
 
         const result = await service.helloWorld();
 
